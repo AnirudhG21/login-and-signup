@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container" id="login-form">
+            <h1>Login</h1>
+            <form action="/login" method="POST">
+                <div class="input-block">
+                    <input type="email" id="login-email" name="email" required spellcheck="false">
+                    <span class="placeholder">Email</span>
+                </div>
+                <div class="input-block">
+                    <input type="password" id="login-password" name="password" required spellcheck="false">
+                    <span class="placeholder">Password</span>
+                    <span class="toggle-password" onclick="togglePasswordVisibility('login-password')">
+                        <i class="fas fa-eye"></i>
+                    </span>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <p class="switch-form">Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
+            </form>
+        </div>
+        <div class="form-container hidden" id="signup-form">
+            <h1>Sign Up</h1>
+            <form action="/signup" method="POST">
+                <div class="input-block">
+                    <input type="text" id="signup-name" name="name" required spellcheck="false">
+                    <span class="placeholder">Name</span>
+                </div>
+                <div class="input-block">
+                    <input type="email" id="signup-email" name="email" required spellcheck="false">
+                    <span class="placeholder">Email</span>
+                </div>
+                <div class="input-block">
+                    <input type="password" id="signup-password" name="password" required spellcheck="false">
+                    <span class="placeholder">Password</span>
+                    <span class="toggle-password" onclick="togglePasswordVisibility('signup-password')">
+                        <i class="fas fa-eye"></i>
+                    </span>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+                <p class="switch-form">Already have an account? <a href="#" id="show-login">Login</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
